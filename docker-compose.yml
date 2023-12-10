@@ -1,10 +1,26 @@
-#dockercompose  config ;  to check the docker-compose.yml  config yml  as it have been defined the containers ;  docker-compose up 
+#dockercompose  config ;  to check the docker-compose.yml  config yml  as it have been defined #the containers ;  docker-compose up 
+
+
+version: '3'
 
 services:
 
   
     web:
       image:  nginx
-
+      ports : 
+          -  "8081:80"
+          - "8443:443"
     database:
-      image: mysql
+      image: mysql:latest
+      ports: 
+        - "3307:3306"
+      environment : 
+        MYSQL_ROOT_PASSWORD : root
+        MYSQL_USER : hadoop
+        MYSQL_PASSWORD  : hadoop
+
+
+ #docker-compose   up  -d --scale  <isntance name form  above>=<no of iinsatance eg ,3> to scale   out thge service in  3 containers 
+
+
