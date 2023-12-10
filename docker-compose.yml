@@ -1,0 +1,10 @@
+#dockercompose  config ;  to check the docker-compose.yml  config yml  as it have been defined the containers ;  docker-compose up 
+
+services:
+
+  
+    web:
+      image:  nginx
+
+    database:
+      image: mysql
