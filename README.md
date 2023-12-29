@@ -4,4 +4,4 @@
 
 
 #upn those grid-template-areas the  children going to act upon  the container  referenced biased upon the column/row
-#  count declared (hint :  you  can look into    2-d matrix)
+#  count declared (refer 2-d matrix)
